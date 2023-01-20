@@ -1,4 +1,4 @@
 package com.fingerdance.minitiktok.service;
 
-public interface UserService {
+public class UserServiceImpl {
 }
