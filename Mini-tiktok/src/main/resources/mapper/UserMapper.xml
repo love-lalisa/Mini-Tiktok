@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fingerdance.minitiktok.mapper.UserMapper">
+
+    <select id="queryAll" resultType="com.fingerdance.minitiktok.pojo.User">
+        select * from user
+    </select>
+
+    <insert id="add" parameterType="com.fingerdance.minitiktok.pojo.User">
+        insert into user values (null, #{user.userName}, #{user.passWord})
+    </insert>
+
+    <select id="queryByName" resultType="com.fingerdance.minitiktok.pojo.User">
+        select * from user where user = #{username} limit 1
+    </select>
+
+</mapper>
