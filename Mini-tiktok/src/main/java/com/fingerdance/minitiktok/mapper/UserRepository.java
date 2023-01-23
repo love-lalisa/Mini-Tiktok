@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 
 @Mapper
 @Repository
-public interface UserMapper {
+public interface UserRepository {
     //查询
     public List<User> queryAll();
 

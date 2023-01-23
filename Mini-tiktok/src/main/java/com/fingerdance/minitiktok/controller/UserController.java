@@ -1,7 +1,9 @@
 package com.fingerdance.minitiktok.controller;
 
 import com.fingerdance.minitiktok.pojo.Response;
+import com.fingerdance.minitiktok.service.UserService;
 import com.fingerdance.minitiktok.service.UserServiceImpl;
+import com.fingerdance.minitiktok.utils.SecurityUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,12 +18,11 @@ import static org.springframework.web.bind.annotation.RequestMethod.PUT;
 @RequestMapping("/douyin/user")
 public class UserController {
     @Autowired
-    UserServiceImpl userServiceImpl;
+    UserService userService;
 
-    @RequestMapping(value = "/register", method = POST)
-    public Response register(@RequestParam String username, @RequestParam String password) {
-
-        return new Response();
+    @RequestMapping(value = "/register", method = PUT)
+    public Response register(@RequestParam String username, @RequestParam String password) throws Exception {
+        return userService.register(username, password);
     }
 
 

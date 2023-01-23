@@ -3,8 +3,6 @@ package com.fingerdance.minitiktok.mapper;
 import com.fingerdance.minitiktok.pojo.User;
 import java.util.ArrayList;
 import java.util.List;
-import jdk.nashorn.internal.ir.annotations.Immutable;
-import org.assertj.core.api.Assert;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -15,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class UserMapperTest {
 
     @Autowired
-    UserMapper userMapper;
+    UserRepository userMapper;
 
     @Test
     public void testAdd() {
