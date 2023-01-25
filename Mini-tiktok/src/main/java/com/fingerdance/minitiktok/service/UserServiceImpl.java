@@ -24,7 +24,8 @@ public class UserServiceImpl implements UserService{
         return null;
     }
 
-    @Override public Response login(String username, String password) {
+    @Override
+    public Response login(String username, String password) {
         return null;
     }
 }
